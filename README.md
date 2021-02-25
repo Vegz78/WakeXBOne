@@ -78,6 +78,7 @@ When everything is ready, rund _\_WakeXBOne.sh_ to power on your XBox One over I
 
 - Same procedure as above for powering **_off_** your XBox One using _\_PowerOffXBOne.sh_.
 - There are some included .bat files, _WinWakeXBOne.bat_ and _WinPowerOffXBOne.bat_, for running these IR-scripts on your Linux device remotely from a Windows device using [Putty´s plink utility](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). Handy if you, for instance, like to stream your XBox One console to a Windows computer.
+- [As described for example here](https://www.irdroid.com/2016/10/discover-how-to-turn-raspberry-pi-into-a-infrared-remote-control-using-the-irdroid-rpi/), it is also possible to rund lirc as a web service, which can be controlled locally and remotely by apps on Android and iPhone phones.
 
 <br>
 
