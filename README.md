@@ -18,8 +18,12 @@ This project aims to find and make available other ways to remotely power on the
 
 Hopefully, these ways will also work on future XBox consoles and, hopefully, Microsoft wants the same and releases the "XBox Wireless" protocol´s power on sequence for open, free and public use.
 
+<br>
+
 # WakeXBOne - RF/SDR
 tbc...
+
+<br>
 
 # WakeXBOne - IR
 Turn on the XBox One remotely from Energy Saving mode using infrared signals.
@@ -32,10 +36,30 @@ Special thanks to [@tuxuser](https://github.com/tuxuser) from the [OpenXbox proj
 - An IR transmitter device in line of sight from the XBox One,<br>
 (I am using an [Irdroid USB IR transceiver](https://www.irdroid.com/irdroid-usb-ir-transceiver/))
 - [LIRC](https://www.lirc.org) with the right IR device driver, and<br>
-(I am using LIRC version > 0.10 from the Debian buster packages)
+(I am using LIRC version > 0.10 from the Debian buster packages and the _irtoy_ driver for the Irdroid)
 - [Git](https://git-scm.com)
 
 The same is probably also possible using the same [LIRC conf file](https://github.com/Vegz78/WakeXBOne/blob/main/IR/xbox-one-lircd.conf) on a Windows computing device runnning [WinLIRC](http://winlirc.sourceforge.net).
+
+## Installation and usage
+- Install LIRC:<br>
+```sudo apt update&&sudo apt install lirc```
+- Clone the WakeXBOne repo:<br>
+```git clone https://github.com/Vegz78/WakeXBOne.git```
+- Copy _.../IR/xbox-one-lircd.conf_ to /etc/lirc/lircd.conf.d:<br>
+```sudo cp xbox-one-lircd.conf /etc/lirc/lircd.conf.d```
+- Edit _.../IR/_WakeXBOne.sh´s_ global variable with the right driver for your IR device:<br>
+```nano _WakeXBOne.sh```
+- Make sure _.../IR/_WakeXBOne.sh_ is executable:<br>
+```chmod +x _WakeXBOne.sh```
+
+When everything is ready, rund _\_WakeXBOne.sh_ to power on your XBox One over IR:<br>
+```/path-to-script/_WakeXBOne.sh```
+
+- Same procedure as above for powering **_off_** your XBox One using _\_PowerOffXBOne.sh_.
+- There are some included .bat files, _WinWakeXBOne.bat_ and _WinPowerOffXBOne.bat_, for running these IR-scripts on your Linux device remotely from a Windows device using [Putty´s plink utility](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). Handy if you, for instance, like to stream your XBox One console to a Windows computer.
+
+<br>
 
 # WakeXBOne - Other means
 tbc...
