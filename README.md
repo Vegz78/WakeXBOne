@@ -21,7 +21,27 @@ Hopefully, these ways will also work on future XBox consoles and, hopefully, Mic
 <br>
 
 # WakeXBOne - RF/SDR
-tbc...
+An attempt to turn on the XBox One remotely from Energy Saving mode using [software defined radio](https://en.wikipedia.org/wiki/Software-defined_radio).
+
+Special thanks to [@Frank Hessel](https://github.com/fhessel) from the [Secure Mobile Networking Lab](https://github.com/seemoo-lab) for tipping me about Nexmon as a possible tool and for helping me get started with it.
+
+I am quite stuck at the moment, so any help is greatly appreciated!
+
+## Idea
+Use the [Nexmon](https://github.com/seemoo-lab/nexmon) firmware patching framework for Broadcom WiFi chips on a Raspberry Pi to inject and transmit the "XBox Wireless" protocol´s power on sequence to the XBox One console, similar to how the XBox controller Guide button powers on the XBox One console.
+
+Tips about other/better approaches are most welcome!
+
+## Results
+- It has been [documented that the XBox controller communicates with the "XBox Wireless" protocol](https://github.com/paroj/xpad/issues/25), which seems to be a slightly modified version of 802.11a/n.
+- The 2.41-2.46 and 5.18-5.8GHz operating frequency hopping radio frequencies for the XBox One controller are [documented e.g. at the FCC](https://fccid.io/C3K1697).
+- While the console is powered on and when connecting a wireless controller I´ve managed with Nexmon in monitor mode and Wireshark to capture communication packets between them on channel 161/20, similar to what [@devkid](https://github.com/devkid) managed in 2016 and has [shared here](https://gist.github.com/devkid/4b3bd50760504d1b93ea684cfd3ed895).
+- When trying to monitor communication while the console is **_off_** and powering it on with the XBox controller Guide button, I still haven´t managed to catch any radio packets with Nexmon and Wireshark.
+- Some people have suggested that there is wireless security/encryption inside the controller and RF/Power board on the console, to prevent/hide the power on sequence from other devices, which may be the reason for not being able to catch these packets.
+
+If anyone has an idea about how to catch and replay the power on sequence, or want to help find out, please get in touch by [opening an issue here](https://github.com/Vegz78/WakeXBOne/issues)!
+
+HELP! ;-)
 
 <br>
 
@@ -62,4 +82,6 @@ When everything is ready, rund _\_WakeXBOne.sh_ to power on your XBox One over I
 <br>
 
 # WakeXBOne - Other means
-tbc...
+Was thinking about collecting links to other working solution for powering on the XBox One wirelessly from Energy Saving mode here.
+
+Tips are most welcome!
