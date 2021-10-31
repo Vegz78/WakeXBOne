@@ -1,4 +1,6 @@
 # WakeXBOne
+([For a similar solution for the PS3, see here](https://github.com/Vegz78/WakePS3))
+
 If you are interested, able and want to help me power on the XBox One wirelessly from Energy Saving mode via RF/SDR, please check out the section [WakeXBOne - RF/SDR](https://github.com/Vegz78/WakeXBOne#wakexbone---rfsdr) and open an [issue](https://github.com/Vegz78/WakeXBOne/issues) to establish contact. If you only want the already working infrared solution, please check out the paragraph [WakeXBOne - IR](https://github.com/Vegz78/WakeXBOne#wakexbone---ir).
 
 ## Motivation
